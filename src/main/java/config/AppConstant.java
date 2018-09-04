@@ -9,8 +9,7 @@ public class AppConstant {
 
     public final static String ONLINE_HOST = "https://newopen.imdada.cn";
 
-    public final static String QA_HOST = "http://127.0.0.1:8089";
-    //public final static String QA_HOST = "http://newopen.qa.imdada.cn";
+    public final static String QA_HOST = "http://newopen.qa.imdada.cn";
 
     public final static String FORMAT = "json";
 
@@ -20,8 +19,8 @@ public class AppConstant {
 
     public final static String QA_SOURCE_ID = "73758";
 
-    public final static String APP_KEY = "dada7c9572fb300cc35";
+    public final static String APP_KEY = "";
 
-    public final static String APP_SECRET = "69543f1940c374d176abdd4d8be8eaa8";
+    public final static String APP_SECRET = "";
 
 }
