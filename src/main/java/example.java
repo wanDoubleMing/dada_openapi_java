@@ -30,12 +30,14 @@ public class example {
         orderAddModel.setCityCode("021");
         orderAddModel.setCargoPrice(BigDecimal.valueOf(111));
         orderAddModel.setIsPrepay(0);
-        orderAddModel.setReceiverName("测试达达");
-        orderAddModel.setReceiverAddress("隆宇大厦");
-        orderAddModel.setReceiverLat(BigDecimal.valueOf(31.228623));
+        // 填写收货人信息
+        orderAddModel.setReceiverName("测试收货人");
+        orderAddModel.setReceiverAddress("测试地址");
+        orderAddModel.setReceiverLat(BigDecimal.valueOf(11.11111228623));
         orderAddModel.setReceiverLng(BigDecimal.valueOf(121.587172));
-        orderAddModel.setReceiverPhone("13622219090");
-        orderAddModel.setCallback("http://newopen.qa.imdada.cn");
+        orderAddModel.setReceiverPhone("xxxxxxxxxxx");
+        // 设置回调url, 订单状态每次变更就会往该url发送通知(参见回调接口)
+        orderAddModel.setCallback("http://xxxxxxxxxxxxxxxxxxxxxxxx");
 
         // 3.初始化service
         OrderAddService orderService = new OrderAddService(orderAddModel.toJson());
@@ -54,16 +56,17 @@ public class example {
 
         // 2.初始化model
         ShopAddModel shopAddModel = new ShopAddModel();
-        shopAddModel.setOriginShopId("testShop-090402");
-        shopAddModel.setStationName("测试门店090402");
+        // 根据实际信息来填写门店地址
+        shopAddModel.setOriginShopId("xxxxxxxxxxxxxxxx");
+        shopAddModel.setStationName("xxxxxxxxxxxxxxxx");
         shopAddModel.setBusiness(2);
         shopAddModel.setCityName("上海");
-        shopAddModel.setAreaName("浦东新区");
-        shopAddModel.setStationAddress("隆宇大厦");
+        shopAddModel.setAreaName("xxxxxxxxxxxxxxxx");
+        shopAddModel.setStationAddress("xxxxxxxxxxxxxxxx");
         shopAddModel.setLng(BigDecimal.valueOf(121.587173));
         shopAddModel.setLat(BigDecimal.valueOf(31.228624));
-        shopAddModel.setContactName("测试达达2");
-        shopAddModel.setPhone("13812344322");
+        shopAddModel.setContactName("xxxxxxxxxxxxxxxx");
+        shopAddModel.setPhone("xxxxxxxxxxxxxxxx");
 
         // 3.初始化service (门店新增比较特殊,是一个批量新增接口)
         List<ShopAddModel> shopAddList = new ArrayList<ShopAddModel>();
